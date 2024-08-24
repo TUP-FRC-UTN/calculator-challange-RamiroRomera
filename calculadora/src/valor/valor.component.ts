@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-valor',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './valor.component.html',
   styleUrl: './valor.component.css'
 })

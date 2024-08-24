@@ -1,2 +1,8 @@
 <p> {{nombre}} </p>
-<input type="text">
+<input 
+  type="number" 
+  [placeholder]="nombre" 
+  [(ngModel)]="valor" 
+  (ngModelChange)="valorCambiado($event)" 
+  class="input-valor"
+/>
