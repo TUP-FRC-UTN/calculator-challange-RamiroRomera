@@ -1,0 +1,34 @@
+<div class="calculadora">
+    <h2>Calculadora</h2>
+    
+    <div>
+      <label>Valor 1</label>
+      <app-valor
+        nombre="Ingrese el primer valor" 
+        (valorCambio)="actualizarValor1($event)">
+      </app-valor>
+    </div>
+  
+    <div>
+      <label>Valor 2</label>
+      <app-valor 
+        nombre="Ingrese el segundo valor" 
+        (valorCambio)="actualizarValor2($event)">
+      </app-valor>
+    </div>
+  
+    <div>
+      <label>Resultado</label>
+      <input type="text" [value]="resultado" disabled class="resultado" />
+    </div>
+  
+    <div class="botones">
+      <app-boton signo="+" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+      <app-boton signo="-" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+      <app-boton signo="X" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+      <app-boton signo="÷" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+      <app-boton signo="^" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+      <app-boton signo="CE" (operacionSeleccionada)="realizarOperacion($event)"></app-boton>
+    </div>
+  </div>
+  
